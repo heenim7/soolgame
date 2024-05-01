@@ -1,7 +1,6 @@
 body{
     /* background-repeat: no-repeat; */
-    background-size: cover;
-    color: rgb(242, 248, 252);
+    background-size: cover; 
     height:100vh;
     display: flex;
     flex-direction: column;
@@ -35,14 +34,15 @@ body{
 }
 
 
-#result-text{
-    font-size:40pt
+.result-text{
+    font-size:20pt
 }
 
 .form-control{
     height:80px;
-    width:50%;
-    font-size: 50pt;
+    width:30%;
+    font-size: 25pt;
     margin-right: 20px;
     text-align: center;
 }
+
