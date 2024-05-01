@@ -1,0 +1,10 @@
+body{
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://cdn.polinews.co.kr/news/photo/202403/640329_444851_1042.jpg)
+}
