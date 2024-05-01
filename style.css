@@ -1,10 +1,48 @@
 body{
     /* background-repeat: no-repeat; */
     background-size: cover;
+    color: rgb(242, 248, 252);
     height:100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: url(https://imgnews.pstatic.net/image/421/2024/04/04/0007457496_002_20240404085714998.jpg?type=w647)
+}
+
+.container{
+    border:10px solid white;
+    border-radius: 20px;
+    text-align: center;
+    background-color: rgba(247, 243, 242,0.7);
+}
+
+.border-line{
+    padding-bottom: 20px;
+    display:flex;
+    justify-content: center;
+}
+
+.title{
+    font-size: 25pt;
+    color: rgb(218, 11, 66);
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.green-text{
+    color:greenyellow
+}
+
+
+#result-text{
+    font-size:40pt
+}
+
+.form-control{
+    height:80px;
+    width:50%;
+    font-size: 50pt;
+    margin-right: 20px;
+    text-align: center;
 }
