@@ -6,9 +6,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(https://imgnews.pstatic.net/image/421/2024/04/04/0007457496_002_20240404085714998.jpg?type=w647)
+    background-image: url(https://imgnews.pstatic.net/image/421/2024/04/04/0007457496_002_20240404085714998.jpg) ;
 }
-
 .container{
     border:10px solid white;
     border-radius: 20px;
