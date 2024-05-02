@@ -29,12 +29,12 @@ body{
 }
 
 .green-text{
-    color:greenyellow
+    color:rgba(11, 214, 11, 0.776)
 }
 
 
 #result-text{
-    font-size:20pt
+    font-size:20pt;
 }
 
 .form-control{
