@@ -76,7 +76,7 @@ function reset(){
     userInput.value = "";
     // 새번호 생성됨
    
-    resultArea.textContent= "좀비 꽐라되기 싫으면 맞춰라";
+    resultArea.innerHTML = `<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaG9kbGp6aHVyeTd6YXlmYWduam9vdzhteXJ1YWt4a29yMGZkaXVjayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yR2Q4iGGSyoEm6FqkQ/giphy.gif"><br> 좀비 꽐라되기 싫으면 맞춰라 `
 
     chances = 5;
     chanceArea.textContent = `남은 기회:${chances}`;
