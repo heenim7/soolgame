@@ -18,6 +18,7 @@ let gameOver = false
 let chanceArea = document.getElementById("chance-area")
 let history=[]
 
+
 playButton.addEventListener("click",play)
 resetButton.addEventListener("click",reset)
 userInput.addEventListener("focus", function(){
@@ -30,28 +31,30 @@ function pickRandomNum(){
 }
 function play(){
     let userValue = userInput.value;
+    
 
     if(userValue<1 || userValue>100) {
-        resultArea.textContent="1부터 100사이 숫자를 입력하시오"
+        resultArea.innerHTML="1부터 100사이 숫자를 입력하시오"
         return;
     }
 
     if (history.includes(userValue)){
-        resultArea.textContent = "이미 입력한 숫자이니 다른 숫자를 입력하시오"
+        resultArea.innerHTML = "이미 입력한 숫자이니 다른 숫자를 입력하시오"
         return;
     }
+
     chances--;
     chanceArea.textContent=`남은기회:${chances}번`;
     console.log("chance", chances);
+    
     if(userValue < computerNum){
-        resultArea.textContent = "UP!!!"
+        resultArea.innerHTML = `<img src="https://media4.giphy.com/media/xT9IgAakXAITtXIWje/giphy.webp?cid=790b7611zedmyamougw8xiej6qg8qmsc9s0j7r6gb38yk95h&ep=v1_gifs_search&rid=giphy.webp&ct=g"/ width=300 height=168><br>UP!!!`
        
     }else if(userValue > computerNum){
-        resultArea.textContent = "DOWN!!!"
+        resultArea.innerHTML = `<img src="https://media0.giphy.com/media/Rdod7XvXQjzCVpiDnR/100.webp?cid=790b7611cuzpmow9lm1jf0rr3cm6qlm8w7bi83d5qb7kca5v&ep=v1_gifs_search&rid=100.webp&ct=g" / width=300 height=168><br> DOWN!!!`
      
     }else {
-        resultArea.textContent = "정답^-^"
-       
+        resultArea.innerHTML = `<img src="https://media1.giphy.com/media/fxsqOYnIMEefC/100.webp?cid=790b76119cf4dfwhi4swpuah9ps20cakg4td3ckbsnibi924&ep=v1_gifs_search&rid=100.webp&ct=g" ><br> 정답^-^ `
         gameOver=true
     }
 
@@ -62,18 +65,18 @@ function play(){
         gameOver = true
     }
 
-    if (gameOver == true){
+    if (gameOver){
         playButton.disabled = true
     }
 }
 
 function reset(){
-    pickRandomNum();
+    computerNum = Math.floor(Math.random()*100)+1;
     // user input창이 깔금정리,
     userInput.value = "";
     // 새번호 생성됨
    
-    resultArea.textContent= "좀비되기 싫으면 맞춰라";
+    resultArea.textContent= "좀비 꽐라되기 싫으면 맞춰라";
 
     chances = 5;
     chanceArea.textContent = `남은 기회:${chances}`;
